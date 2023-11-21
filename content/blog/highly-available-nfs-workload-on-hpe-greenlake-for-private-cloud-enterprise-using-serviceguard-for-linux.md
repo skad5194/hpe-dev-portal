@@ -137,9 +137,9 @@ When a user creates virtual machines using the HPE GreenLake for Private Cloud E
 
 API Clients which are used to create virtual machines can also set Linux and Windows username and password values. Since the API Client does not use the HPE GreenLake for Private Cloud Enterprise: Virtual Machines user interface, this must be done via an API call.
 
-Here is a sample script which reads the VM\_USERNAME and VM\_PASSWORD environment variables and uses the values for Linux and Windows username and password for the API Client. The script assumes a Location value of ‘FTC06’ and Space value of ‘Default’. 
+Here is a sample script which reads the VM_USERNAME and VM_PASSWORD environment variables and uses the values for Linux and Windows username and password for the API Client. The script assumes a Location value of ‘FTC06’ and Space value of ‘Default’. 
 
-To execute this script, first set appropriate values for the VM\_USERNAME and VM\_PASSWORD environment variables. Next, execute the resource file, which was created earlier, which sets the HPEGL\*\* environment variables for your API Client. 
+To execute this script, first set appropriate values for the VM_USERNAME and VM_PASSWORD environment variables. Next, execute the resource file, which was created earlier, which sets the HPEGL\*\* environment variables for your API Client. 
 
 Finally, execute the script below:
 
@@ -199,7 +199,7 @@ Your next step with the TF file is to query the HPE GreenLake provider to collec
 
 •	Folder Code
 
-For this, you will use the Terraform data statements. For example, the following statement retrieves the Cloud ID and stores it (in variable called cloud), which we can later retrieve using: data.hpegl\_vmass\_cloud.cloud.id
+For this, you will use the Terraform data statements. For example, the following statement retrieves the Cloud ID and stores it (in variable called cloud), which we can later retrieve using: data.hpegl_vmass_cloud.cloud.id
 
 ```json
 # Retrieve cloud id
@@ -375,7 +375,7 @@ hpegl_vmaas_instance.my_drbd[1]: Creation complete after 2m8s [id=3105]
 hpegl_vmaas_instance.my_drbd[0]: Creation complete after 2m8s [id=3111]
 hpegl_vmaas_instance.my_quorum[0]: Creation complete after 2m8s [id=3108]
 
-Apply complete! Resources: 4 added, 0 changed, 0 destroyed.
+Apply complete! Resources: 3 added, 0 changed, 0 destroyed.
 ```
 
 Once the command completes, your virtual machines are ready.
@@ -562,7 +562,7 @@ Serviceguard for Linux Flex Storage Add-on is a software-based, shared-nothing, 
 
 ## Configuring LVM
 
-Once data replication is configured on the nodes, you can configure LVM on top of the DRBD disk _/dev/drbd0_. The following Ansible snippet can be used to configure the LVM volume group named nfsvg and logical volume names nfsvol of size 45GB.
+Once data replication is configured on the nodes, you can configure LVM on top of the DRBD disk */dev/drbd0*. The following Ansible snippet can be used to configure the LVM volume group named nfsvg and logical volume names nfsvol of size 45GB.
 
 ```yaml
 ---
